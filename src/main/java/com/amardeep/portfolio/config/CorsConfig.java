@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://portfolio-frontend-nu-orpin.vercel.app/") // your vercel URL
+                        .allowedOrigins("https://portfolio-frontend-m8fm.onrender.com") // your vercel URL
 //                        .allowedOrigins("http://localhost:8080") // your Vite dev URL
                         .allowedMethods("GET", "POST", "OPTIONS")
                         .allowedHeaders("*");
