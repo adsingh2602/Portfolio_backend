@@ -1,5 +1,6 @@
 # ---------- Build stage ----------
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# Use Maven with JDK 21
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
@@ -11,7 +12,8 @@ COPY src ./src
 RUN mvn -DskipTests package
 
 # ---------- Run stage ----------
-FROM eclipse-temurin:17-jre-alpine
+# Use JRE/JDK 21 to run the app
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
