@@ -14,7 +14,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:8080") // your Vite dev URL
+                        .allowedOrigins("https://portfolio-frontend-kappa-eight.vercel.app/") // your vercel URL
+//                        .allowedOrigins("http://localhost:8080") // your Vite dev URL
                         .allowedMethods("GET", "POST", "OPTIONS")
                         .allowedHeaders("*");
             }
